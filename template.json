@@ -192,6 +192,28 @@
         "VpcId" : { "Ref" : "VPC" },
         "CidrBlock" : "10.0.0.0/24",
         "AvailabilityZone" : "us-east-1a",
+
+SubnetA:
+  Type: AWS::EC2::Subnet
+  Properties:
+    AvailabilityZone: us-west-2
+    VpcId: !Ref VPC
+    CidrBlock: 172.31.0.0/20
+    MapPublicIpOnLaunch: true
+SubnetB:
+  Type: AWS::EC2::Subnet
+  Properties:
+    AvailabilityZone: us-west-3
+    VpcId: !Ref VPC
+    CidrBlock: 172.31.16.0/20
+    MapPublicIpOnLaunch: true
+SubnetC:
+  Type: AWS::EC2::Subnet
+  Properties:
+    AvailabilityZone: us-west-4
+    VpcId: !Ref VPC
+    CidrBlock: 172.31.32.0/20
+    MapPublicIpOnLaunch: true
      }
   }
  }
