@@ -156,8 +156,7 @@
       "Properties" : {
         "InstanceType" : { "Ref" : "InstanceType" },
         "SecurityGroups" : [ { "Ref" : "InstanceSecurityGroup" } ],
-         "VPCId" : [ { "Ref" : "VPCId" } ],
-        "SubnetIds" : [ { "Ref" : "SubnetIds" } ], 
+        
         "Tags" : [
                     {
                         "Key" : "Name",
@@ -185,17 +184,7 @@
     }
   },
     
-  "VPCId": {
-            "Type" : "String",
-            "Default" : "vpc-775cf811",
-            "Description" : "Select virtual private cloud ID for this deployment!" 
-        },
-       
-  "SubnetIds": {
-            "Type" : "List",
-          "Default" : "subnet-4512e423"
-            "Description" : "Select two or more subnets in different Availability Zones!"
-        },
+  
 
   "Outputs" : {
     "InstanceId" : {
