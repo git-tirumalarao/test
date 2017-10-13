@@ -212,7 +212,9 @@
             "KeyName": "User1",
             "SecurityGroupIds": ["subnet-4512e423"]
         }
-    }}
+    }
+                 
+  }
 }
   
 
